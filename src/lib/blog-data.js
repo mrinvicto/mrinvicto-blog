@@ -18,22 +18,12 @@ export const authors = [
 ];
 
 export const categories = [
-  { slug: "essays", name: "Essays" },
-  { slug: "design", name: "Design" },
-  { slug: "engineering", name: "Engineering" },
-  { slug: "field-notes", name: "Field Notes" },
   { slug: "interviews", name: "Interviews" },
 ];
 
 export const tags = [
   { slug: "writing", name: "Writing" },
-  { slug: "typography", name: "Typography" },
-  { slug: "minimalism", name: "Minimalism" },
-  { slug: "tools", name: "Tools" },
-  { slug: "travel", name: "Travel" },
-  { slug: "process", name: "Process" },
-  { slug: "web", name: "Web" },
-  { slug: "books", name: "Books" },
+  { slug: "typography", name: "Typography" }
 ];
 
 const isoDate = (date) => date?.toISOString().slice(0, 10);
