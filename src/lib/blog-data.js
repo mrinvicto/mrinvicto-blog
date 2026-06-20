@@ -8,28 +8,12 @@ const siteUrl = (
 
 export const authors = [
   {
-    slug: "elena-march",
-    name: "Elena March",
+    slug: "dinesh-verma",
+    name: "Dinesh Verma",
     bio: "Writer & editor covering design, craft, and slow technology.",
     longBio:
       "Elena March writes about the quiet edges of design and technology. Previously an editor at two small magazines, she now publishes essays and field notes from a desk overlooking the harbour.",
     avatar: "https://i.pravatar.cc/200?img=47",
-  },
-  {
-    slug: "samuel-okafor",
-    name: "Samuel Okafor",
-    bio: "Software engineer with a soft spot for typography and the open web.",
-    longBio:
-      "Samuel builds tools for writers and reads more than he ships. He believes the best interfaces are the ones you don't notice.",
-    avatar: "https://i.pravatar.cc/200?img=12",
-  },
-  {
-    slug: "mira-iwasaki",
-    name: "Mira Iwasaki",
-    bio: "Photographer and essayist based between Kyoto and Lisbon.",
-    longBio:
-      "Mira's work sits at the intersection of place, memory, and the everyday object. Her essays have appeared in a number of small but loved publications.",
-    avatar: "https://i.pravatar.cc/200?img=32",
   },
 ];
 
