@@ -1,4 +1,4 @@
-import { SITE, authors, categories, sortedPosts, tags } from "../lib/blog-data.js";
+import { SITE, authors, categories, sortedPosts, tags, postPermalink } from "../lib/blog-data.js";
 
 const BASE_URL = SITE.url || "";
 
@@ -10,7 +10,7 @@ export async function GET() {
     { path: "/about", changefreq: "monthly", priority: "0.6" },
     { path: "/contact", changefreq: "monthly", priority: "0.5" },
     ...posts.map((post) => ({
-      path: `/blog/${post.slug}`,
+      path: postPermalink(post),
       lastmod: post.updated || post.date,
       changefreq: "monthly",
       priority: "0.8",

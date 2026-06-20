@@ -21,7 +21,7 @@ QuietPages is a calm Astro theme for independent magazines, personal journals, a
 - RSS feed, XML sitemap, and dynamic robots.txt
 - Canonical URLs, Open Graph tags, Twitter card metadata, and article JSON-LD
 - Light and dark modes with system preference support
-- Self-hosted Inter, Fraunces, and JetBrains Mono fonts
+- Self-hosted Source Serif 4, Bricolage Grotesque, and Fira Code (via Fontsource variable packages)
 - Accessible landmarks, visible focus states, skip link, and reduced-motion handling
 - Responsive images through Astro's image pipeline
 - Contact page and custom 404 page
@@ -85,7 +85,7 @@ This keeps canonical URLs, Open Graph URLs, RSS links, robots.txt, and the sitem
 
 ## Content
 
-Blog posts live in [`src/content/blog`](./src/content/blog). Each post uses an `index.mdx` file inside its own folder, with local images stored beside the content.
+Blog posts live in [`src/content/blog`](./src/content/blog). Each post uses an `index.mdx` file inside its own folder, with local images stored beside the content. Published URLs are `/{category-slug}/{post-slug}` (for example `/interviews/a-conversation-with-a-bookbinder`), where `category` matches the post frontmatter. The archive remains at `/blog`.
 
 Required frontmatter is validated in [`src/content.config.js`](./src/content.config.js):
 

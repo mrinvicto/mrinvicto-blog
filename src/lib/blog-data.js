@@ -63,6 +63,9 @@ export const normalizePost = (entry) => ({
   updated: isoDate(entry.data.updated),
 });
 
+/** Public URL path for a post: `/{categorySlug}/{postSlug}` */
+export const postPermalink = (post) => `/${post.category}/${post.slug}`;
+
 export const posts = async () => (await getCollection("blog")).map(normalizePost);
 
 export const getPost = async (slug) => (await posts()).find((post) => post.slug === slug);

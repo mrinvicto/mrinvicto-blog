@@ -1,4 +1,4 @@
-import { SITE, getAuthor, sortedPosts } from "../lib/blog-data.js";
+import { SITE, getAuthor, sortedPosts, postPermalink } from "../lib/blog-data.js";
 
 const BASE_URL = SITE.url || "";
 
@@ -7,7 +7,7 @@ const esc = (value) =>
 
 export async function GET() {
   const items = (await sortedPosts()).map((post) => {
-    const link = `${BASE_URL}/blog/${post.slug}`;
+    const link = `${BASE_URL}${postPermalink(post)}`;
     const author = getAuthor(post.author);
     return [
       "    <item>",

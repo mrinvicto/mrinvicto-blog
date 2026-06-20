@@ -15,6 +15,6 @@ All notable changes to Quiet Pages will be documented in this file.
 - RSS feed, XML sitemap, and dynamic robots.txt route.
 - SEO defaults including canonical URLs, Open Graph metadata, Twitter card metadata, and article JSON-LD.
 - Light and dark mode with system preference support.
-- Self-hosted Inter, Fraunces, and JetBrains Mono fonts.
+- Self-hosted Source Serif 4, Bricolage Grotesque, and Fira Code (Fontsource variable packages).
 - Responsive images through Astro's image pipeline.
 - Accessibility defaults including semantic landmarks, skip link, visible focus styles, current-page navigation state, keyboard-friendly search/menu controls, and reduced-motion handling.

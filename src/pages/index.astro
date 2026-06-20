@@ -13,6 +13,7 @@ import {
   getAuthor,
   getCategory,
   formatDate,
+  postPermalink,
 } from "../lib/blog-data.js";
 
 const featured = await featuredPost();
@@ -62,7 +63,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
           <a
-            href={`/blog/${featured.slug}`}
+            href={postPermalink(featured)}
             class="group inline-flex items-center gap-2 border-b border-white pb-1 text-sm font-medium text-white hover:border-white/70 hover:text-white/82"
           >
             Begin with this issue's lead essay
@@ -83,7 +84,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
         <a href="/blog" class="text-xs text-muted-foreground hover:text-foreground">All writing &rarr;</a>
       </div>
       <article class="grid gap-10 lg:grid-cols-2">
-        <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
+        <a href={postPermalink(featured)} class="group block" aria-label={`Read ${featured.title}`}>
           <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted">
             {
               featured.thumbnail && (
@@ -108,7 +109,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             <span>&middot;</span>
             <time datetime={featured.date}>{formatDate(featured.date)}</time>
           </div>
-          <a href={`/blog/${featured.slug}`}>
+          <a href={postPermalink(featured)}>
             <h2 class="mt-3 font-serif text-3xl font-semibold leading-tight tracking-tight hover:text-primary sm:text-4xl">
               {featured.title}
             </h2>
@@ -132,7 +133,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
             }
             <span>{featured.readingTime} min read</span>
           </div>
-          <a href={`/blog/${featured.slug}`} class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+          <a href={postPermalink(featured)} class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
             Read the essay <Icon name="arrow-right" class="h-3.5 w-3.5" />
           </a>
         </div>

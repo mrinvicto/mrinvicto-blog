@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { getAuthor, getCategory, formatDate } from "../lib/blog-data.js";
+import { getAuthor, getCategory, formatDate, postPermalink } from "../lib/blog-data.js";
 
 const { post, variant = "default", hidden = false } = Astro.props;
 const author = getAuthor(post.author);
@@ -12,7 +12,7 @@ const thumbnailIsString = typeof post.thumbnail === "string";
 {
   variant === "compact" ? (
     <a
-      href={`/blog/${post.slug}`}
+      href={postPermalink(post)}
       class="group block"
       data-post-card
       data-category={post.category}
@@ -47,7 +47,7 @@ const thumbnailIsString = typeof post.thumbnail === "string";
           <span>&middot;</span>
           <time datetime={post.date}>{formatDate(post.date)}</time>
         </div>
-        <a href={`/blog/${post.slug}`}>
+        <a href={postPermalink(post)}>
           <h2 class="mt-2 font-serif text-2xl font-semibold leading-tight tracking-tight group-hover:text-primary sm:text-3xl">
             {post.title}
           </h2>
@@ -64,7 +64,7 @@ const thumbnailIsString = typeof post.thumbnail === "string";
         </div>
       </div>
       {post.thumbnail && (
-        <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.title}`}>
+        <a href={postPermalink(post)} class="block" aria-label={`Read ${post.title}`}>
           <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted sm:aspect-square">
             {
               thumbnailIsString ? (
@@ -99,7 +99,7 @@ const thumbnailIsString = typeof post.thumbnail === "string";
       hidden={hidden}
     >
       {post.thumbnail && (
-        <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.title}`}>
+        <a href={postPermalink(post)} class="block" aria-label={`Read ${post.title}`}>
           <div class="aspect-[16/10] overflow-hidden rounded-md bg-muted">
             {
               thumbnailIsString ? (
@@ -133,7 +133,7 @@ const thumbnailIsString = typeof post.thumbnail === "string";
           <span>&middot;</span>
           <time datetime={post.date}>{formatDate(post.date)}</time>
         </div>
-        <a href={`/blog/${post.slug}`}>
+        <a href={postPermalink(post)}>
           <h3 class="mt-2 font-serif text-xl font-semibold leading-snug tracking-tight group-hover:text-primary">
             {post.title}
           </h3>
