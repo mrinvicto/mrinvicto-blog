@@ -220,11 +220,30 @@ const jsonLd = {
           }
         </nav>
 
-        <div class="mt-12 rounded-md border border-dashed border-border p-8 text-center">
-          <Icon name="message" class="mx-auto h-5 w-5 text-muted-foreground" />
-          <div class="mt-2 font-serif text-lg">Comments</div>
-          <p class="mt-1 text-sm text-muted-foreground">Hook this up to your favourite commenting platform &mdash; Giscus, Disqus, or your own.</p>
-        </div>
+        <section class="mt-12 border-t border-border pt-10" aria-labelledby="comments-heading">
+          <h2 id="comments-heading" class="font-serif text-2xl font-semibold tracking-tight">Comments</h2>
+          <p class="mt-2 max-w-2xl text-sm text-muted-foreground">
+            Replies use <a href="https://github.com/giscus/giscus" class="text-foreground underline underline-offset-2 hover:text-primary">Giscus</a> and GitHub Discussions. Sign in with GitHub to take part.
+          </p>
+          <div class="giscus mt-8"></div>
+          <script
+            is:inline
+            src="https://giscus.app/client.js"
+            data-repo="mrinvicto/mrinvicto-blog"
+            data-repo-id="R_kgDOS_u3RA"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOS_u3RM4C_jGm"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="0"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async></script>
+        </section>
       </div>
 
       <aside class="hidden lg:block">
